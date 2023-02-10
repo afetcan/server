@@ -1,0 +1,42 @@
+{
+    "dotenv.enableAutocloaking": false,
+    // Iconlar bu adreste -> https://primer.style/octicons/
+    "commands.commands": [
+        {
+            "command": "terminals.runTerminalByName",
+            "arguments": [
+                "dev"
+            ],
+            "color": "#4ebb00",
+            "text": "$(rocket) dev",
+            "tooltip": "Dev"
+        },
+        {
+            "command": "terminals.runTerminalByName",
+            "arguments": [
+                "test"
+            ],
+            "color": "#757575",
+            "text": "$(beaker) Test",
+            "tooltip": "Postgress Mikro-Orm Test"
+        },
+        {
+            "command": "terminals.runTerminalByName",
+            "arguments": [
+                "test:watch"
+            ],
+            "color": "#757575",
+            "text": "$(beaker) Test Watch",
+            "tooltip": "Postgress Mikro-Orm Test"
+        },
+        {
+            "command": "terminals.runTerminalByName",
+            "arguments": [
+                "npmPublish"
+            ],
+            "color": "#4ebb00",
+            "text": "$(rocket) npm publish",
+            "tooltip": "npmPublish"
+        },
+    ],
+}
