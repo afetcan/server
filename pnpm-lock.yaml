@@ -8,7 +8,7 @@ specifiers:
   '@afetcan/api': ^0.0.12
   '@afetcan/email': ^0.0.7
   '@afetcan/service-common': ^0.0.4
-  '@afetcan/storage': ^0.0.25
+  '@afetcan/storage': ^0.0.26
   '@antfu/eslint-config': ^0.35.2
   '@aws-sdk/client-s3': ^3.276.0
   '@clickhouse/client': ^0.0.12
@@ -18,7 +18,7 @@ specifiers:
   '@fastify/autoload': ^5.7.1
   '@fastify/formbody': ^7.4.0
   '@fastify/multipart': ^7.4.1
-  '@graphql-tools/links': ^8.3.31
+  '@graphql-tools/links': ^8.3.32
   '@graphql-tools/load-files': ^6.6.1
   '@graphql-tools/resolvers-composition': ^6.5.17
   '@graphql-tools/schema': ^9.0.16
@@ -64,7 +64,7 @@ dependencies:
   '@afetcan/api': 0.0.12_bpgrwrg744k7slyw2fqwf2nh6u
   '@afetcan/email': 0.0.7_bpgrwrg744k7slyw2fqwf2nh6u
   '@afetcan/service-common': 0.0.4
-  '@afetcan/storage': 0.0.25
+  '@afetcan/storage': 0.0.26
   '@aws-sdk/client-s3': 3.276.0
   '@clickhouse/client': 0.0.12
   '@envelop/generic-auth': 5.0.6_graphql@16.6.0
@@ -73,7 +73,7 @@ dependencies:
   '@fastify/autoload': 5.7.1
   '@fastify/formbody': 7.4.0
   '@fastify/multipart': 7.4.1
-  '@graphql-tools/links': 8.3.31_graphql@16.6.0
+  '@graphql-tools/links': 8.3.32_graphql@16.6.0
   '@graphql-tools/load-files': 6.6.1_graphql@16.6.0
   '@graphql-tools/resolvers-composition': 6.5.17_graphql@16.6.0
   '@graphql-tools/schema': 9.0.16_graphql@16.6.0
@@ -138,7 +138,7 @@ packages:
       '@envelop/generic-auth': 5.0.6_graphql@16.6.0
       '@envelop/graphql-modules': 4.0.6_y47avxfzvkcjz6cux2uol3xpke
       '@envelop/response-cache-redis': 2.0.7_graphql@16.6.0
-      '@graphql-tools/links': 8.3.31_graphql@16.6.0
+      '@graphql-tools/links': 8.3.32_graphql@16.6.0
       '@graphql-tools/resolvers-composition': 6.5.17_graphql@16.6.0
       '@graphql-tools/schema': 9.0.16_graphql@16.6.0
       '@huntersofbook/relay-cursor-paging': 1.0.0_graphql@16.6.0
@@ -260,8 +260,8 @@ packages:
       - tedious
     dev: false
 
-  /@afetcan/storage/0.0.25:
-    resolution: {integrity: sha512-+hrtynqZkBclpYFPs9zq5tQVUOnBXMG8BqTCbE1+q5EIU8kkdCNu9HitkF4NByoKL0L/10GzSqFG2Xidl6Th/Q==}
+  /@afetcan/storage/0.0.26:
+    resolution: {integrity: sha512-k0SdwrLEO4i6j72kHMScGxVtTQ72eNi761EQqxNXEhDtIiKYYp3Q7WYgM8+5TLvLlLJpV7LLyEXxfWJgWW/Dhg==}
     engines: {node: '>=v18.10.0', pnpm: '>=7.26.3'}
     dependencies:
       '@mikro-orm/core': 6.0.0-dev.40
@@ -2061,13 +2061,13 @@ packages:
       value-or-promise: 1.0.11
     dev: false
 
-  /@graphql-tools/delegate/9.0.27_graphql@16.6.0:
-    resolution: {integrity: sha512-goYewiPls/RDXiRTl1S2tRPlsyDQCxlDWqd0uEIzQZ6aWSyiutfwQnTzdbZPXK0qOblEVMIqFhSGrB6fp0OkBA==}
+  /@graphql-tools/delegate/9.0.28_graphql@16.6.0:
+    resolution: {integrity: sha512-8j23JCs2mgXqnp+5K0v4J3QBQU/5sXd9miaLvMfRf/6963DznOXTECyS9Gcvj1VEeR5CXIw6+aX/BvRDKDdN1g==}
     peerDependencies:
       graphql: ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0 || 16.6.0
     dependencies:
       '@graphql-tools/batch-execute': 8.5.18_graphql@16.6.0
-      '@graphql-tools/executor': 0.0.14_graphql@16.6.0
+      '@graphql-tools/executor': 0.0.15_graphql@16.6.0
       '@graphql-tools/schema': 9.0.16_graphql@16.6.0
       '@graphql-tools/utils': 9.2.1_graphql@16.6.0
       dataloader: 2.2.2
@@ -2089,13 +2089,26 @@ packages:
       value-or-promise: 1.0.12
     dev: false
 
-  /@graphql-tools/links/8.3.31_graphql@16.6.0:
-    resolution: {integrity: sha512-llclrKNyT9WMq8+wSjKVSTICajeDrMX+FITf2CyiDeCOhUdghnFcbUuIJk+hAbI29YZgOyLWDICreM9q0Ydh6A==}
+  /@graphql-tools/executor/0.0.15_graphql@16.6.0:
+    resolution: {integrity: sha512-6U7QLZT8cEUxAMXDP4xXVplLi6RBwx7ih7TevlBto66A/qFp3PDb6o/VFo07yBKozr8PGMZ4jMfEWBGxmbGdxA==}
+    peerDependencies:
+      graphql: ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0 || 16.6.0
+    dependencies:
+      '@graphql-tools/utils': 9.2.1_graphql@16.6.0
+      '@graphql-typed-document-node/core': 3.1.2_graphql@16.6.0
+      '@repeaterjs/repeater': 3.0.4
+      graphql: 16.6.0
+      tslib: 2.5.0
+      value-or-promise: 1.0.12
+    dev: false
+
+  /@graphql-tools/links/8.3.32_graphql@16.6.0:
+    resolution: {integrity: sha512-/Cw48cTcw3FFjBKDQ7k6w9AYfMZwrQ3AxBYOeTWWfhQWFHPTJIXXidzBwyQ4Y7LTX+pbdDEqV3PdssGKEF1Cdg==}
     peerDependencies:
       '@apollo/client': ~3.2.5 || ~3.3.0 || ~3.4.0 || ~3.5.0 || ~3.6.0 || ~3.7.0
       graphql: ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0 || 16.6.0
     dependencies:
-      '@graphql-tools/delegate': 9.0.27_graphql@16.6.0
+      '@graphql-tools/delegate': 9.0.28_graphql@16.6.0
       '@graphql-tools/utils': 9.2.1_graphql@16.6.0
       apollo-upload-client: 17.0.0_graphql@16.6.0
       form-data: 4.0.0
@@ -2218,6 +2231,14 @@ packages:
     resolution: {integrity: sha512-NQ17ii0rK1b34VZonlmT2QMJFI70m0TRwbknO/ihlbatXyaktDhN/98vBiUU6kNBPljqGqyIrl2T4nY2RpFANg==}
     peerDependencies:
       graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0 || 16.6.0
+    dependencies:
+      graphql: 16.6.0
+    dev: false
+
+  /@graphql-typed-document-node/core/3.1.2_graphql@16.6.0:
+    resolution: {integrity: sha512-9anpBMM9mEgZN4wr2v8wHJI2/u5TnnggewRN6OlvXTTnuVyoY19X6rOv9XTqKRw6dcGKwZsBi8n0kDE2I5i4VA==}
+    peerDependencies:
+      graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0 || ^17.0.0 || 16.6.0
     dependencies:
       graphql: 16.6.0
     dev: false
