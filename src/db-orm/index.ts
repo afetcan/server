@@ -1,5 +1,5 @@
 import { MikroORM, ReflectMetadataProvider } from '@mikro-orm/core'
-import { EmergencyEntity } from '@acildeprem/storage'
+import { EmergencyEntity } from '@afetcan/storage'
 import { env } from '../environment'
 // import { seedDatabase } from './helpers'
 

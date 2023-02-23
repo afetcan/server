@@ -1,19 +1,19 @@
 {
-  "name": "@acildeprem/server",
+  "name": "@afetcan/server",
   "private": false,
   "type": "module",
-  "version": "0.0.11",
-  "description": "Server for acildeprem.com",
+  "version": "0.0.1",
+  "description": "Server for afetcan.com",
   "author": "Mehmet - productdevbook <hi@productdevbook.com>",
   "license": "MIT",
-  "homepage": "https://github.com/acildeprem/#readme",
+  "homepage": "https://github.com/afetcan/#readme",
   "packageManager": "pnpm@7.26.3",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/acildeprem/server.git"
+    "url": "git+https://github.com/afetcan/server.git"
   },
   "bugs": {
-    "url": "https://github.com/acildeprem/server/issues"
+    "url": "https://github.com/afetcan/server/issues"
   },
   "exports": {
     ".": {
@@ -42,14 +42,14 @@
     "test:watch": "vitest --watch",
     "lint": "eslint --ext .ts,.tsx,.js,.jsx .",
     "lint:fix": "eslint --ext .ts,.tsx,.js,.jsx . --fix",
-    "release": "bumpp --commit --push --tag && pnpm publish"
+    "release": "pnpm build && bumpp --commit --push --tag && pnpm publish"
   },
   "dependencies": {
     "@abraham/reflection": "^0.12.0",
-    "@acildeprem/api": "0.0.5",
-    "@acildeprem/email": "0.0.5",
-    "@acildeprem/service-common": "0.0.2",
-    "@acildeprem/storage": "0.0.17",
+    "@afetcan/api": "^0.0.12",
+    "@afetcan/email": "^0.0.7",
+    "@afetcan/service-common": "^0.0.4",
+    "@afetcan/storage": "^0.0.24",
     "@aws-sdk/client-s3": "^3.264.0",
     "@clickhouse/client": "^0.0.12",
     "@envelop/generic-auth": "^5.0.4",

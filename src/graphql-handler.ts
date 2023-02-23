@@ -25,8 +25,8 @@ import { useResponseCache } from '@graphql-yoga/plugin-response-cache'
 import type { Cache } from '@envelop/response-cache'
 import { MikroORM } from '@mikro-orm/postgresql'
 import { Redis } from 'ioredis'
-import { Context, PubSub } from '@acildeprem/api'
-import { cleanRequestId } from '@acildeprem/service-common'
+import { Context, PubSub } from '@afetcan/api'
+import { cleanRequestId } from '@afetcan/service-common'
 import { asyncStorage } from './async-storage.js'
 
 const reqIdGenerate = hyperid({ fixedLength: true })

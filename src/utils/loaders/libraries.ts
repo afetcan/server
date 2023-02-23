@@ -1,6 +1,6 @@
 import DataLoader from 'dataloader'
 import { EntityManager } from '@mikro-orm/postgresql'
-import { EmergencyEntity } from '@acildeprem/storage'
+import { EmergencyEntity } from '@afetcan/storage'
 
 export const getLibraries = (
   em: EntityManager,

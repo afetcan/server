@@ -6,7 +6,7 @@ import cors from '@fastify/cors'
 import {
   createServer,
   registerShutdown,
-} from '@acildeprem/service-common'
+} from '@afetcan/service-common'
 import { createRedisCache } from '@envelop/response-cache-redis'
 import Redis from 'ioredis'
 
@@ -18,8 +18,8 @@ import formDataPlugin from '@fastify/formbody'
 import { S3Client } from '@aws-sdk/client-s3'
 
 // import multipart from '@fastify/multipart'
-import { type LogFn, type Logger, createRegistry } from '@acildeprem/api'
-import { createStorage } from '@acildeprem/storage'
+import { type LogFn, type Logger, createRegistry } from '@afetcan/api'
+import { createStorage } from '@afetcan/storage'
 
 import { env } from './environment'
 import { graphqlHandler } from './graphql-handler'
@@ -93,11 +93,11 @@ export async function main() {
 
   const MOBILE = process.env.NODE_ENV === 'development'
     ? 'http://localhost:3100'
-    : 'https://acildeprem.com'
+    : 'https://afetcan.com'
 
   const WEBSITE = process.env.NODE_ENV === 'development'
     ? 'http://localhost:3000'
-    : 'https://acildeprem.com'
+    : 'https://afetcan.com'
 
   const APP_ORIGIN_URLS = [
     'capacitor://localhost',

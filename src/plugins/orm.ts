@@ -3,7 +3,7 @@ import { MikroORM } from '@mikro-orm/postgresql'
 import waitOn from 'wait-on'
 import fp from 'fastify-plugin'
 import { FastifyInstance, FastifyPluginAsync } from 'fastify'
-import { createMikroORMPostgress } from '@acildeprem/storage/createMikroORMPostgress'
+import { createMikroORMPostgress } from '@afetcan/storage/createMikroORMPostgress'
 import { env } from '../environment'
 // import { entities } from '../entity/index'
 

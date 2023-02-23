@@ -4,7 +4,7 @@ import { RedisClient } from 'ioredis/built/connectors/SentinelConnector/types'
 import waitOn from 'wait-on'
 import { createRedisEventTarget } from '@graphql-yoga/redis-event-target'
 import fp from 'fastify-plugin'
-import { PubSub } from '@acildeprem/api'
+import { PubSub } from '@afetcan/api'
 import { FastifyInstance, FastifyPluginAsync } from 'fastify'
 import { env } from '../environment.js'
 
