@@ -82,7 +82,7 @@
     "nanoid": "^4.0.1",
     "pathe": "^1.1.0",
     "resolve-accept-language": "^1.1.43",
-    "supertokens-node": "^12.1.6",
+    "supertokens-node": "^13.1.0",
     "uuid": "^9.0.0",
     "wait-on": "^7.0.1",
     "wkx": "^0.5.0",
