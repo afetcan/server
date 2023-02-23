@@ -37,7 +37,7 @@ services:
       - stack
 
   afetcan_redis:
-    image: redis:7.0.7-alpine
+    image: redis:7.0.8-alpine
     networks:
       - 'stack'
     ports:
