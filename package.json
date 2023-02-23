@@ -2,7 +2,7 @@
   "name": "@afetcan/server",
   "private": false,
   "type": "module",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Server for afetcan.com",
   "author": "Mehmet - productdevbook <hi@productdevbook.com>",
   "license": "MIT",
