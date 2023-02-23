@@ -1,0 +1,145 @@
+enum AuthProvider {
+  APPLE
+  GITHUB
+  GOOGLE
+}
+
+type BaseDate {
+  createdAt: DateTime!
+  updatedAt: DateTime!
+}
+
+type BaseNode {
+  id: ID!
+}
+
+input CreateEmergencyInput {
+  address: String
+  latitude: Float
+  longitude: Float
+  name: String
+  phone: String
+  surname: String
+}
+
+type CreateEmergencyResult {
+  data: Emergency
+  isSuccess: Boolean!
+  message: String!
+}
+
+scalar Cursor
+
+scalar Date
+
+scalar DateTime
+
+type Emergency {
+  address: String
+  createdAt: DateTime
+  id: ID!
+  latitude: Float
+  longitude: Float
+  name: String
+  phone: String
+  surname: String
+  updatedAt: DateTime
+}
+
+interface Error {
+  message: String!
+}
+
+scalar File
+
+scalar JSON @specifiedBy(url: "http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-404.pdf")
+
+type Mutation {
+  createEmergency(data: CreateEmergencyInput!): CreateEmergencyResult!
+  newUserOnboard(input: NewUserOnboardInput!): NewUserOnboardResult!
+  noop: Boolean
+  profileImageUpload(file: File!): String!
+  updateMe(input: UpdateMeInput!): UpdateMeResult!
+}
+
+type NewUserOnboardError implements Error {
+  """The detailed validation error messages for the input fields."""
+  inputErrors: NewUserOnboardInputErrors!
+  message: String!
+}
+
+input NewUserOnboardInput {
+  fullName: String!
+  username: String!
+}
+
+type NewUserOnboardInputErrors {
+  fullName: String
+  username: String
+}
+
+type NewUserOnboardOk {
+  updatedUser: User!
+}
+
+"""@oneOf"""
+type NewUserOnboardResult {
+  error: NewUserOnboardError
+  ok: NewUserOnboardOk
+}
+
+enum OrderDirection {
+  asc
+  desc
+}
+
+type PageInfo {
+  endCursor: Cursor
+  hasNextPage: Boolean
+  hasPreviousPage: Boolean
+  startCursor: Cursor
+  totalPageCount: Int
+}
+
+type Query {
+  me: User!
+  noop: Boolean
+}
+
+scalar Timestamp
+
+type UpdateMeError implements Error {
+  """The detailed validation error messages for the input fields."""
+  inputErrors: UpdateMeInputErrors!
+  message: String!
+}
+
+input UpdateMeInput {
+  fullName: String!
+  username: String!
+}
+
+type UpdateMeInputErrors {
+  fullName: String
+  username: String
+}
+
+type UpdateMeOk {
+  updatedUser: User!
+}
+
+"""@oneOf"""
+type UpdateMeResult {
+  error: UpdateMeError
+  ok: UpdateMeOk
+}
+
+type User {
+  email: String!
+  fullName: String!
+  id: ID!
+  isAdmin: Boolean!
+  isSuperAdmin: Boolean!
+  provider: AuthProvider!
+  username: String!
+}

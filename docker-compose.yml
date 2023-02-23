@@ -36,6 +36,15 @@ services:
     networks:
       - stack
 
+  afetcan_redis:
+    image: redis:7.0.7-alpine
+    networks:
+      - 'stack'
+    ports:
+      - "6379:6379"
+    command: redis-server --save 20 1 --loglevel warning --requirepass redispass
+    restart: always
+
 
   afetcan_directus:
     container_name: afetcan_directus
